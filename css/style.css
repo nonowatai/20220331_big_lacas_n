@@ -152,10 +152,10 @@ html body main article section.left .cobe {
   position: absolute;
   top: 160px;
   left: 150px;
-  -webkit-animation: big1 2s ease;
-          animation: big1 2s ease;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation: big1 1s ease;
+          animation: big1 1s ease;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 @-webkit-keyframes big1 {
   15% {
