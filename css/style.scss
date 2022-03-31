@@ -71,46 +71,112 @@ a:link {
 html {
     width: 100%;
     height: 100%;
-    background-color: aquamarine;  //適應性//
+    background-color: #38561a;  
 
     body {
-        min-width: 980px;  //到980px時背景停止移動
-        height: auto;   //跟著html的高去變動//
-        overflow: hidden;   //不顯示滾動條//
+        min-width: 980px; 
+        height: auto; 
+        // overflow: hidden;
         
-        main {      //主體//
+        main {
             width: 100%;
             height: 1000px;
             overflow: hidden;
-            article{   // 中間底
-                width: 980px; 
+            article{
+                width: 1200px; 
                 height: 100%;
                 margin: 0 auto;
-                section {   //分成左右邊
+
+                section {
                 width: 50%;
                 height: 100%;
-                float: left;   //左邊
+                float: left; 
+
                     &.left {
                         position: relative;
                         z-index: -998;
                         
-                        .img1 {       //圖片建議再包一層再下圖片//
-                            position: absolute;
-                            width: 979px;
-                            height: 903px;
-                            left: -195px;
-                            background: url(../image/體育.png)no-repeat;
+                        .baseball-man {
+                            width: 797px;
+                            height: 687px;
+                            background: url(../image/baseball-man.png) no-repeat;
                             background-size: 100%;
+                            position: absolute;
+                            right: -45px;
+                            top: 160px;
+                            animation: sliden 2s ease;
+                            animation-delay: 0.9s;
+
+                            @keyframes sliden {
+                                15% {
+                                    transform: rotate(10deg);
+                                }
+                                30% {
+                                    transform:  rotate(-5deg);
+                                }
+                                100% {
+                                    transform:  rotate(0deg);
+                                }
+                            }
+                        }
+
+                        .cobe {
+                            width: 572px;
+                            height: 701px;
+                            background: url(../image/cobe.png) no-repeat;
+                            background-size: 100%;
+                            position: absolute;
+                            top: 160px;
+                            left: 150px;
+
+                            animation: big1 2s ease;
+                            animation-delay: 0.5s;
+
+                            @keyframes big1 {
+                                15% {
+                                    width: 602px;
+                                    height: 731px;
+                                }
+                                30% {
+                                    width: 572px;
+                                    height: 701px;
+                                }
+                            }
+                        }
+
+                        .red-man {
+                            width: 337px;
+                            height: 806px;
+                            background: url(../image/red_man.png) no-repeat;
+                            background-size: 100%;
+                            position: absolute;
+                            top: 90px;
+                            left: 192px;
+
+                            animation: big 2s ease;
+
+                            @keyframes big {
+                                15% {
+                                    width: 377px;
+                                    height: 846px;
+                                }
+                                30% {
+                                    width: 337px;
+                                    height: 806px;
+                                }
+                            }
                         }
                     }
+
                     &.right {
                         position: relative;
+
                         .logo{
-                           width: 322px;
-                           height: 138px;
+                           width: 511px;
+                           height: 179px;
                            background: url(../image/logo.png) no-repeat;
                            background-size: 100%;
-                           margin: 65px 0px 0 112px;
+                           margin: 80px 0px 0 23px;
                         }
                         .inputBox {
                             position: absolute;
@@ -118,93 +184,72 @@ html {
                             height: 289px;
                             border-radius: 20px; 
                             margin:21px 30px 5px 38px ;
-                            background: -moz-linear-gradient(top, #fffce8 0%, #fffce8 9%, #1aa9b3 100%);
-                            background: -webkit-linear-gradient(top, #fffce8 0%,#fffce8 9%,#1aa9b3 100%);
-                            background: linear-gradient(to bottom, #fffce8 0%,#fffce8 9%,#1aa9b3 100%);
-
-                            .btnBox {
-                                text-align: center;
-                                height: auto;
-                                width: 100%;
-                                margin: 30px 0px;
-
-                                button {
-                                    width: 208px;
-                                    height: 81px;
-                                    background: url('../image/btn.png') no-repeat;
-                                    background-size: 100%;
-                                    font-size: 22px;
-                                    font-weight: bold;
-                                    margin-right: 5px;
-                                    &:hover,&:active,&.active {
-                                        background-position-y: calc(100% + 2px);
-                                    }
-                                    &:hover,&:active,&button {
-                                        color: #fff;
-                                    }
-                                }
-                            }
+                            background: none;
 
                             .box1 {
-                                width: 240px;
-                                height: 200px;
-                                margin: -15px 0px 0 0px;
-                                input {
-                                    width: 195px;
-                                    height: 29px;
-                                    border-radius: 3px;
-                                    margin: 7px 10px 0 35px;
-                                    background: #011c26;
-                                    color: #fff;
-                                    border: 1px solid #fff;
-                                    font-size: 15px;
-                                    padding-left: 10px;
-                                    
-                                }
-                            }
-                           .btnBox2 {
-                            width: 208px;
-                            height: 81px;
-                            margin: -194px 0px 0 253px;
+                                width: 100%;
+                                height: 140px;
+                                display: flex;
+                                margin: 3px 0 0 40px;
+                                
+                                .input-box {
+                                    width: 65%;
 
-                            button {
-                                width: 208px;
-                                height: 81px;
-                                background: url('../image/btn.png') no-repeat;
-                                background-size: 100%;
-                                font-size: 32px;
-                                font-weight: bold;
-                                color: #fff;
-                                &:hover,&:active,&.active {
-                                    background-position-y: calc(100% + 2px);
-                                    color: #000;
+                                    input {
+                                    width: 263px;
+                                    height: 46px;
+                                    border-radius: 3px;
+                                    margin: 7px 10px 5px 0px;
+                                    background: linear-gradient(to top, #d7d7d7 1%,#ffffff 11%,#aaaaaa 100%);;
+                                    box-shadow: 1px 1px 0px 0px #12091078 inset;
+                                    border-radius: 8px;
+                                    border: 1px solid #fff;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    padding-left: 15px;
+
+                                    &::placeholder {
+                                        color: #4c4c4c;
+                                        padding-left: 75px;
+                                    }
+                                    
+                                    }
                                 }
-                             }
-                           }     
+
+                                .button-box {
+                                    width: 35%;
+
+                                    button {
+                                        width: 107px;
+                                        height: 115px;
+                                        background: url('../image/btn.png') no-repeat;
+                                        line-height: 115px;
+                                        background-size: 100%;
+                                        font-size: 32px;
+                                        font-weight: bold;
+                                        color: #fff6e1;
+                                        margin-top: 7px;
+                                        &:hover,&:active,&.active {
+                                            background-position-y: calc(100% + 2px);
+                                        }
+                                     }
+                                }
+                
+                               
+                            }
                             .smalllogo_Box {
-                                width:100%;
-                                height: 49px;
-                                margin: 13px 0px 0 0;
+                                width:269px;
+                                height: 107px;
+                                margin: 5px 0px 0 125px;
                                 .smalllogo {
-                                width: 401px;
-                                height: 49px; 
+                                width:269px;
+                                height: 107px;
                                 background: url(../image/小logo.png) no-repeat;
                                 background-size: 100%;
                                 background-position: center;
                                 margin: auto;
 }
-                            }
-                            .waterBox {
-                                width: 418px;
-                                height: 266px;
-                                .water {
-                                    width: 100%;
-                                    height: 100%;
-                                    background: url(../image/water.png) no-repeat;
-                                    background-size: 100%;
-                                    margin: -140px 0px 0 188px;
-                                }
-                            }    
+                            } 
                       }
                     }
                 }
@@ -217,7 +262,8 @@ html {
             position: absolute;
             top: 0px;
             width: 100%;
-            min-width: 980px;   //到980時停止移動//
+            min-width: 980px; 
+            min-height: 1000px;   //到980時停止移動//
             height: 100%;
             background: url('../image/bg.png') no-repeat top center;
             z-index: -999;
