@@ -130,14 +130,13 @@ html {
                             left: 150px;
 
                             animation: big1 2s ease;
-                            animation-delay: 0.5s;
+                            animation-delay: 0.2s;
 
                             @keyframes big1 {
                                 15% {
-                                    width: 602px;
-                                    height: 731px;
+                                    transform: scale(1.1);
                                 }
-                                30% {
+                                100% {
                                     width: 572px;
                                     height: 701px;
                                 }
@@ -153,14 +152,14 @@ html {
                             top: 90px;
                             left: 192px;
 
-                            animation: big 2s ease;
+                            animation: big 1s ease;
 
                             @keyframes big {
+
                                 15% {
-                                    width: 377px;
-                                    height: 846px;
+                                    transform: scale(1.1);
                                 }
-                                30% {
+                                100% {
                                     width: 337px;
                                     height: 806px;
                                 }
@@ -197,7 +196,7 @@ html {
 
                                     input {
                                     width: 263px;
-                                    height: 46px;
+                                    height: 42px;
                                     border-radius: 3px;
                                     margin: 7px 10px 5px 0px;
                                     background: linear-gradient(to top, #d7d7d7 1%,#ffffff 11%,#aaaaaa 100%);;
@@ -217,7 +216,7 @@ html {
                                 }
 
                                 .button-box {
-                                    width: 35%;
+                                    width: 40%;
 
                                     button {
                                         width: 107px;

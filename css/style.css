@@ -154,25 +154,25 @@ html body main article section.left .cobe {
   left: 150px;
   -webkit-animation: big1 2s ease;
           animation: big1 2s ease;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 @-webkit-keyframes big1 {
   15% {
-    width: 602px;
-    height: 731px;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
-  30% {
+  100% {
     width: 572px;
     height: 701px;
   }
 }
 @keyframes big1 {
   15% {
-    width: 602px;
-    height: 731px;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
-  30% {
+  100% {
     width: 572px;
     height: 701px;
   }
@@ -185,25 +185,25 @@ html body main article section.left .red-man {
   position: absolute;
   top: 90px;
   left: 192px;
-  -webkit-animation: big 2s ease;
-          animation: big 2s ease;
+  -webkit-animation: big 1s ease;
+          animation: big 1s ease;
 }
 @-webkit-keyframes big {
   15% {
-    width: 377px;
-    height: 846px;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
-  30% {
+  100% {
     width: 337px;
     height: 806px;
   }
 }
 @keyframes big {
   15% {
-    width: 377px;
-    height: 846px;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
-  30% {
+  100% {
     width: 337px;
     height: 806px;
   }
@@ -239,7 +239,7 @@ html body main article section.right .inputBox .box1 .input-box {
 }
 html body main article section.right .inputBox .box1 .input-box input {
   width: 263px;
-  height: 46px;
+  height: 42px;
   border-radius: 3px;
   margin: 7px 10px 5px 0px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(1%, #d7d7d7), color-stop(11%, #ffffff), to(#aaaaaa));
@@ -273,7 +273,7 @@ html body main article section.right .inputBox .box1 .input-box input::placehold
   padding-left: 75px;
 }
 html body main article section.right .inputBox .box1 .button-box {
-  width: 35%;
+  width: 40%;
 }
 html body main article section.right .inputBox .box1 .button-box button {
   width: 107px;
