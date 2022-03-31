@@ -1,0 +1,225 @@
+@font-face {
+    font-family: "my_font";
+    src:local("Heiti TC"), local("微軟正黑體"), local("Microsoft JhengHei");
+    unicode-range: U+4E00-9FFF, U+2E80-2EFF, U+0020-007F;
+}
+@font-face{
+    font-family: 'my_font';
+    src:url(../font/Bahnschrift.TTF);
+    unicode-range: U+0020-007F;
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,
+center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+main {
+    display: block;
+}
+ol,ul {
+    list-style: none;
+}
+blockquote,q {
+    quotes: none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button {
+    font-family: "my_font";
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px;
+}
+select,input {
+    font-family: "my_font";
+    outline: none;
+}
+html {
+    font-family: "my_font";
+    background: white;
+    box-sizing: border-box;
+    margin: 0px auto;
+    // user-select: none;
+}
+a:link {
+    text-decoration: none;
+}
+
+
+//內容 ///////////////////////////////////////////////////////////
+
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;  //適應性//
+
+    body {
+        min-width: 980px;  //到980px時背景停止移動
+        height: auto;   //跟著html的高去變動//
+        overflow: hidden;   //不顯示滾動條//
+        
+        main {      //主體//
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+            article{   // 中間底
+                width: 980px; 
+                height: 100%;
+                margin: 0 auto;
+                section {   //分成左右邊
+                width: 50%;
+                height: 100%;
+                float: left;   //左邊
+                    &.left {
+                        position: relative;
+                        z-index: -998;
+                        
+                        .img1 {       //圖片建議再包一層再下圖片//
+                            position: absolute;
+                            width: 979px;
+                            height: 903px;
+                            left: -195px;
+                            background: url(../image/體育.png)no-repeat;
+                            background-size: 100%;
+                        }
+                    }
+                    &.right {
+                        position: relative;
+                        .logo{
+                           width: 322px;
+                           height: 138px;
+                           background: url(../image/logo.png) no-repeat;
+                           background-size: 100%;
+                           margin: 65px 0px 0 112px;
+                        }
+                        .inputBox {
+                            position: absolute;
+                            width: 491px;
+                            height: 289px;
+                            border-radius: 20px; 
+                            margin:21px 30px 5px 38px ;
+                            background: -moz-linear-gradient(top, #fffce8 0%, #fffce8 9%, #1aa9b3 100%);
+                            background: -webkit-linear-gradient(top, #fffce8 0%,#fffce8 9%,#1aa9b3 100%);
+                            background: linear-gradient(to bottom, #fffce8 0%,#fffce8 9%,#1aa9b3 100%);
+
+                            .btnBox {
+                                text-align: center;
+                                height: auto;
+                                width: 100%;
+                                margin: 30px 0px;
+
+                                button {
+                                    width: 208px;
+                                    height: 81px;
+                                    background: url('../image/btn.png') no-repeat;
+                                    background-size: 100%;
+                                    font-size: 22px;
+                                    font-weight: bold;
+                                    margin-right: 5px;
+                                    &:hover,&:active,&.active {
+                                        background-position-y: calc(100% + 2px);
+                                    }
+                                    &:hover,&:active,&button {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+
+                            .box1 {
+                                width: 240px;
+                                height: 200px;
+                                margin: -15px 0px 0 0px;
+                                input {
+                                    width: 195px;
+                                    height: 29px;
+                                    border-radius: 3px;
+                                    margin: 7px 10px 0 35px;
+                                    background: #011c26;
+                                    color: #fff;
+                                    border: 1px solid #fff;
+                                    font-size: 15px;
+                                    padding-left: 10px;
+                                    
+                                }
+                            }
+                           .btnBox2 {
+                            width: 208px;
+                            height: 81px;
+                            margin: -194px 0px 0 253px;
+
+                            button {
+                                width: 208px;
+                                height: 81px;
+                                background: url('../image/btn.png') no-repeat;
+                                background-size: 100%;
+                                font-size: 32px;
+                                font-weight: bold;
+                                color: #fff;
+                                &:hover,&:active,&.active {
+                                    background-position-y: calc(100% + 2px);
+                                    color: #000;
+                                }
+                             }
+                           }     
+                            .smalllogo_Box {
+                                width:100%;
+                                height: 49px;
+                                margin: 13px 0px 0 0;
+                                .smalllogo {
+                                width: 401px;
+                                height: 49px; 
+                                background: url(../image/小logo.png) no-repeat;
+                                background-size: 100%;
+                                background-position: center;
+                                margin: auto;
+}
+                            }
+                            .waterBox {
+                                width: 418px;
+                                height: 266px;
+                                .water {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: url(../image/water.png) no-repeat;
+                                    background-size: 100%;
+                                    margin: -140px 0px 0 188px;
+                                }
+                            }    
+                      }
+                    }
+                }
+              }
+
+            }
+        }
+        //背景
+        .bg {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            min-width: 980px;   //到980時停止移動//
+            height: 100%;
+            background: url('../image/bg.png') no-repeat top center;
+            z-index: -999;
+        }
+    }
